@@ -45,7 +45,7 @@ class _BoutiqueState extends State<Boutique> {
               height: 0.50 * height,
               child: Stack(
                 children: [
-                  Box_container(),
+                  BoxContainer(),
                   Align(
                       alignment: Alignment.bottomCenter,
                       child: Container(

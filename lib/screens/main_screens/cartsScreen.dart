@@ -79,7 +79,7 @@ class _CartScreenState extends State<CartScreen> {
                         ),
                         Center(
                           child: Text(
-                            "Saved",
+                            "Cart",
                             style: const TextStyle(
                                 fontFamily: "Montserrat",
                                 fontSize: 20,

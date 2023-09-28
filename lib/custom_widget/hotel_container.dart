@@ -34,7 +34,7 @@ class Hotel_container extends StatelessWidget {
         Navigator.push(
             context,
             MaterialPageRoute(
-                builder: (context) => Hotel_details(
+                builder: (context) => HotelDetails(
                       disctext: description,
                       image: image,
                       city: location,

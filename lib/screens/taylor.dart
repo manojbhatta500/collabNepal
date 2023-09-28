@@ -43,7 +43,7 @@ class _TaylorState extends State<Taylor> {
               height: 0.50 * height,
               child: Stack(
                 children: [
-                  Box_container(),
+                  BoxContainer(),
                   Align(
                       alignment: Alignment.bottomCenter,
                       child: Container(

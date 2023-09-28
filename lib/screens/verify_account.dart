@@ -3,14 +3,14 @@ import 'package:collabnepal/services/Services.dart';
 import 'package:flutter/material.dart';
 import 'package:pin_code_text_field/pin_code_text_field.dart';
 
-class Verify_Account_Page extends StatefulWidget {
-  const Verify_Account_Page({super.key});
+class VerifyAccountPage extends StatefulWidget {
+  const VerifyAccountPage({super.key});
 
   @override
-  State<Verify_Account_Page> createState() => _Verify_Account_PageState();
+  State<VerifyAccountPage> createState() => _VerifyAccountPageState();
 }
 
-class _Verify_Account_PageState extends State<Verify_Account_Page> {
+class _VerifyAccountPageState extends State<VerifyAccountPage> {
   @override
   Widget build(BuildContext context) {
     TextEditingController input_otp = TextEditingController();

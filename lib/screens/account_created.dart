@@ -1,20 +1,19 @@
 import 'package:flutter/material.dart';
 
-class Account_Created_Page extends StatefulWidget {
-  const Account_Created_Page({super.key});
+class AccountCreatedPage extends StatefulWidget {
+  const AccountCreatedPage({super.key});
 
   @override
-  State<Account_Created_Page> createState() => _Account_Created_PageState();
+  State<AccountCreatedPage> createState() => _AccountCreatedPageState();
 }
 
-class _Account_Created_PageState extends State<Account_Created_Page> {
+class _AccountCreatedPageState extends State<AccountCreatedPage> {
   @override
   Widget build(BuildContext context) {
     double width = MediaQuery.of(context).size.width;
     double height = MediaQuery.of(context).size.width;
 
-    return MaterialApp(
-        home: Scaffold(
+    return  Scaffold(
       body: SingleChildScrollView(
         child: Column(
           mainAxisAlignment: MainAxisAlignment.start,
@@ -90,6 +89,6 @@ class _Account_Created_PageState extends State<Account_Created_Page> {
           ],
         ),
       ),
-    ));
+    );
   }
 }

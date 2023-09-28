@@ -1,13 +1,13 @@
 import 'package:flutter/material.dart';
 
-class Create_Account_page extends StatefulWidget {
-  const Create_Account_page({super.key});
+class CreateAccountPage extends StatefulWidget {
+  const CreateAccountPage({super.key});
 
   @override
-  State<Create_Account_page> createState() => _Create_Account_pageState();
+  State<CreateAccountPage> createState() => _CreateAccountPageState();
 }
 
-class _Create_Account_pageState extends State<Create_Account_page> {
+class _CreateAccountPageState extends State<CreateAccountPage> {
   bool checkboxValue = false;
 
   @override
@@ -15,8 +15,7 @@ class _Create_Account_pageState extends State<Create_Account_page> {
     double width = MediaQuery.of(context).size.width;
     double height = MediaQuery.of(context).size.width;
 
-    return MaterialApp(
-      home: Scaffold(
+    return  Scaffold(
         body: SingleChildScrollView(
           child: Column(
             mainAxisAlignment: MainAxisAlignment.start,
@@ -167,7 +166,7 @@ class _Create_Account_pageState extends State<Create_Account_page> {
             ],
           ),
         ),
-      ),
+
     );
   }
 }

@@ -1,14 +1,14 @@
 import 'package:flutter/material.dart';
 import 'package:collabnepal/constants/constant.dart';
 
-class ForgotPassword_page extends StatefulWidget {
-  const ForgotPassword_page({super.key});
+class ForgotPasswordPage extends StatefulWidget {
+  const ForgotPasswordPage({super.key});
 
   @override
-  State<ForgotPassword_page> createState() => _ForgotPassword_pageState();
+  State<ForgotPasswordPage> createState() => _ForgotPasswordPageState();
 }
 
-class _ForgotPassword_pageState extends State<ForgotPassword_page> {
+class _ForgotPasswordPageState extends State<ForgotPasswordPage> {
   @override
   Widget build(BuildContext context) {
     double width = MediaQuery.of(context).size.width;

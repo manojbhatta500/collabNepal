@@ -46,16 +46,7 @@ class _ShopState extends State<Shop> {
 
     return SafeArea(
         child: Scaffold(
-      bottomNavigationBar: BottomNavigationBar(items: [
-        BottomNavigationBarItem(
-            icon: Image.asset('assets/home.png'), label: 'home'),
-        BottomNavigationBarItem(
-            icon: Image.asset('assets/fav.png'), label: 'favroite'),
-        BottomNavigationBarItem(
-            icon: Image.asset('assets/cart.png'), label: 'cart'),
-        BottomNavigationBarItem(
-            icon: Image.asset('assets/user.png'), label: 'user')
-      ]),
+
       body: SingleChildScrollView(
         child: Column(
           children: [
@@ -64,7 +55,7 @@ class _ShopState extends State<Shop> {
               height: 0.50 * height,
               child: Stack(
                 children: [
-                  Box_container(),
+                  BoxContainer(),
                   Positioned(
                     top: 150,
                     left: 30,

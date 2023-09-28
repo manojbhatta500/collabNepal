@@ -1,10 +1,10 @@
 import 'package:collabnepal/screens/account_created.dart';
 import 'package:collabnepal/screens/boutique.dart';
-import 'package:collabnepal/screens/cartsScreen.dart';
+import 'package:collabnepal/screens/main_screens/cartsScreen.dart';
 import 'package:collabnepal/screens/change_password.dart';
 import 'package:collabnepal/screens/create_phone_account.dart';
 import 'package:collabnepal/screens/create_account_page.dart';
-import 'package:collabnepal/screens/favroite.dart';
+import 'package:collabnepal/screens/main_screens/favroite.dart';
 import 'package:collabnepal/screens/forgot_password.dart';
 import 'package:collabnepal/screens/front_page.dart';
 import 'package:collabnepal/screens/home_page.dart';
@@ -32,18 +32,18 @@ class Manager extends StatelessWidget {
       debugShowCheckedModeBanner: false,
       initialRoute: '/home',
       routes: {
-        '/home': (context) => Home_Page(),
-        '/create_account': (context) => Create_Account_page(),
-        '/phonenumber': (context) => Create_phonenumber_account(),
-        '/verify': (context) => Verify_Account_Page(),
-        '/account_created': (context) => Account_Created_Page(),
-        '/login': (context) => Login_Page(),
-        '/forgot_password': (context) => ForgotPassword_page(),
-        '/change_password': (context) => Change_password(),
-        '/front_page': (context) => Front_page(),
+        '/home': (context) => HomePage(),
+        '/create_account': (context) => CreateAccountPage(),
+        '/phonenumber': (context) => CreatePhonenumberAccount(),
+        '/verify': (context) => VerifyAccountPage(),
+        '/account_created': (context) => AccountCreatedPage(),
+        '/login': (context) => LoginPage(),
+        '/forgot_password': (context) => ForgotPasswordPage(),
+        '/change_password': (context) => ChangePassword(),
+        '/front_page': (context) => FrontPage(),
         '/shop': (context) => Shop(),
         '/searched': (context) => Searched(),
-        '/hotelbook': (context) => Hotel_Booking(),
+        '/hotelbook': (context) => HotelBooking(),
         '/boutique': (context) => Boutique(),
         '/taylor': (context) => Taylor(),
         '/product': (context) => Products(),

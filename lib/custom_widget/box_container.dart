@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 
-class Box_container extends StatelessWidget {
-  const Box_container({super.key});
+class BoxContainer extends StatelessWidget {
+  const BoxContainer({super.key});
 
   @override
   Widget build(BuildContext context) {
@@ -25,7 +25,7 @@ class Box_container extends StatelessWidget {
                 height: 25,
               ),
               Padding(
-                padding: EdgeInsets.symmetric(horizontal: 40),
+                padding: EdgeInsets.symmetric(horizontal: 20),
                 child: Row(
                   mainAxisAlignment: MainAxisAlignment.spaceBetween,
                   children: [
@@ -46,11 +46,11 @@ class Box_container extends StatelessWidget {
                         Container(
                           child: Row(
                             children: [
-                              Icon(Icons.person, size: 30, color: Colors.white),
+                              Icon(Icons.person_outline_outlined, size: 30, color: Colors.white),
                               SizedBox(
                                 width: 5,
                               ),
-                              Icon(Icons.shopping_cart,
+                              Icon(Icons.shopping_cart_outlined,
                                   size: 30, color: Colors.white)
                             ],
                           ),
@@ -61,7 +61,7 @@ class Box_container extends StatelessWidget {
                 ),
               ),
               SizedBox(
-                height: 30,
+                height: 28,
               ),
               Row(
                 mainAxisAlignment: MainAxisAlignment.spaceBetween,
@@ -72,9 +72,17 @@ class Box_container extends StatelessWidget {
                     margin: EdgeInsets.only(left: 0.1 * width),
                     child: TextField(
                       decoration: InputDecoration(
+                          hintText: 'Search for a Brand',
+                          hintStyle: TextStyle(
+                            color: Color(0xFFD5DDE0),
+                            fontSize: 10.24,
+                            fontFamily: 'Montserrat',
+                            fontWeight: FontWeight.w900,
+                            height: 0,
+                          ),
                           prefixIcon: Icon(
                             Icons.search,
-                            color: Colors.black,
+                            color: Colors.grey.withOpacity(0.6),
                           ),
                           border: OutlineInputBorder(
                               borderSide: BorderSide(color: Colors.white),
@@ -90,14 +98,14 @@ class Box_container extends StatelessWidget {
                   Container(
                     margin: EdgeInsets.only(right: 0.1 * width),
                     decoration: BoxDecoration(
-                      borderRadius: BorderRadius.circular(5),
+                      borderRadius: BorderRadius.circular(11),
                       color: Colors.white,
                     ),
                     height: 45,
                     width: 45,
                     child: Icon(
-                      Icons.camera_alt,
-                      color: Colors.black,
+                      Icons.camera_alt_outlined,
+                      color: Colors.grey.withOpacity(0.6),
                     ),
                   ),
                 ],

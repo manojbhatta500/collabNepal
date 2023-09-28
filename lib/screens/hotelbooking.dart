@@ -4,14 +4,14 @@ import 'package:collabnepal/services/hotel_services.dart';
 import 'package:flutter/material.dart';
 import 'package:collabnepal/custom_widget/hotel_container.dart';
 
-class Hotel_Booking extends StatefulWidget {
-  const Hotel_Booking({super.key});
+class HotelBooking extends StatefulWidget {
+  const HotelBooking({super.key});
 
   @override
-  State<Hotel_Booking> createState() => _Hotel_BookingState();
+  State<HotelBooking> createState() => _HotelBookingState();
 }
 
-class _Hotel_BookingState extends State<Hotel_Booking> {
+class _HotelBookingState extends State<HotelBooking> {
   List<Hotel_container> gethotellist = [];
 
   @override
@@ -50,7 +50,7 @@ class _Hotel_BookingState extends State<Hotel_Booking> {
             height: 0.35 * height,
             child: Stack(
               children: [
-                Box_container(),
+                BoxContainer(),
                 Align(
                   alignment: Alignment.bottomCenter,
                   child: Container(

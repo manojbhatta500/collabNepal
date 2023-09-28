@@ -1,12 +1,12 @@
 import 'package:flutter/material.dart';
 
-class Hotel_details extends StatelessWidget {
+class HotelDetails extends StatelessWidget {
   final String disctext;
 
   final String image;
   final String name;
   final String city;
-  Hotel_details(
+  HotelDetails(
       {super.key,
       required this.image,
       required this.disctext,
