@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "546086476310",
+    "project_id": "collabnepal-4d549",
+    "storage_bucket": "collabnepal-4d549.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:546086476310:android:de77b95e6bf19d3f273337",
+        "android_client_info": {
+          "package_name": "com.example.collabnepal"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "546086476310-5fvnd4rhc6prdve1ugqhdgv50fgf08m8.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCPSwDeV9aR0UDNArsvIUFehWkcL5MiNuk"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "546086476310-5fvnd4rhc6prdve1ugqhdgv50fgf08m8.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
