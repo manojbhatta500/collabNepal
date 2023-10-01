@@ -55,7 +55,7 @@ class _ProfileScreenState extends State<ProfileScreen> {
               height: 32,
             ),
             Padding(
-              padding: EdgeInsets.symmetric(horizontal: 18),
+              padding: EdgeInsets.symmetric(horizontal: 10),
               child: Row(
                 crossAxisAlignment: CrossAxisAlignment.start,
                 children: [
@@ -253,53 +253,55 @@ class _ProfileScreenState extends State<ProfileScreen> {
             SizedBox(
               height: 21,
             ),
-            Padding(
-              padding: EdgeInsets.symmetric(horizontal: 13),
-              child: Container(
-                width: 407,
-                height: 39,
-                decoration: ShapeDecoration(
-                  color: Color(0xFFF6F1F1),
-                  shape: RoundedRectangleBorder(
-                    borderRadius: BorderRadius.circular(29),
+            Center(
+              child: Padding(
+                padding: EdgeInsets.symmetric(horizontal: 13),
+                child: Container(
+                  width: 407,
+                  height: 39,
+                  decoration: ShapeDecoration(
+                    color: Color(0xFFF6F1F1),
+                    shape: RoundedRectangleBorder(
+                      borderRadius: BorderRadius.circular(29),
+                    ),
                   ),
-                ),
-                child: Padding(
-                  padding: EdgeInsets.symmetric(horizontal: 20),
-                  child: Row(
-                    mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                    children: [
-                      Text(
-                        'Personal',
-                        style: TextStyle(
-                          color: Colors.black,
-                          fontSize: 15,
-                          fontFamily: 'Montserrat',
-                          fontWeight: FontWeight.w600,
-                          height: 0,
+                  child: Padding(
+                    padding: EdgeInsets.symmetric(horizontal: 20),
+                    child: Row(
+                      mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                      children: [
+                        Text(
+                          'Personal',
+                          style: TextStyle(
+                            color: Colors.black,
+                            fontSize: 15,
+                            fontFamily: 'Montserrat',
+                            fontWeight: FontWeight.w600,
+                            height: 0,
+                          ),
                         ),
-                      ),
-                      Text(
-                        'Address',
-                        style: TextStyle(
-                          color: Colors.black,
-                          fontSize: 15,
-                          fontFamily: 'Montserrat',
-                          fontWeight: FontWeight.w400,
-                          height: 0,
+                        Text(
+                          'Address',
+                          style: TextStyle(
+                            color: Colors.black,
+                            fontSize: 15,
+                            fontFamily: 'Montserrat',
+                            fontWeight: FontWeight.w400,
+                            height: 0,
+                          ),
                         ),
-                      ),
-                      Text(
-                        'Document',
-                        style: TextStyle(
-                          color: Colors.black,
-                          fontSize: 15,
-                          fontFamily: 'Montserrat',
-                          fontWeight: FontWeight.w400,
-                          height: 0,
+                        Text(
+                          'Document',
+                          style: TextStyle(
+                            color: Colors.black,
+                            fontSize: 15,
+                            fontFamily: 'Montserrat',
+                            fontWeight: FontWeight.w400,
+                            height: 0,
+                          ),
                         ),
-                      ),
-                    ],
+                      ],
+                    ),
                   ),
                 ),
               ),

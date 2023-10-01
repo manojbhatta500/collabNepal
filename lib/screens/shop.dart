@@ -46,7 +46,6 @@ class _ShopState extends State<Shop> {
 
     return SafeArea(
         child: Scaffold(
-
       body: SingleChildScrollView(
         child: Column(
           children: [
@@ -57,7 +56,7 @@ class _ShopState extends State<Shop> {
                 children: [
                   BoxContainer(),
                   Positioned(
-                    top: 150,
+                    top: 200,
                     left: 30,
                     right: 30,
                     child: Container(

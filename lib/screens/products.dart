@@ -20,6 +20,7 @@ class _ProductsState extends State<Products> {
     Taylor_products(
         taylor_name: 'albert shop', taylor_pic: 'assets/shampoo.png'),
   ];
+
   @override
   Widget build(BuildContext context) {
     double height = MediaQuery.of(context).size.height;

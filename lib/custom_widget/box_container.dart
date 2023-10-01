@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 
 class BoxContainer extends StatelessWidget {
-  const BoxContainer({super.key});
+  const BoxContainer({Key? key}) : super(key: key);
 
   @override
   Widget build(BuildContext context) {
@@ -46,7 +46,8 @@ class BoxContainer extends StatelessWidget {
                         Container(
                           child: Row(
                             children: [
-                              Icon(Icons.person_outline_outlined, size: 30, color: Colors.white),
+                              Icon(Icons.person_outline_outlined,
+                                  size: 30, color: Colors.white),
                               SizedBox(
                                 width: 5,
                               ),

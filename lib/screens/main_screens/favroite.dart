@@ -14,55 +14,55 @@ class _FavroiteState extends State<Favroite> {
     double height = MediaQuery.of(context).size.height;
     double width = MediaQuery.of(context).size.width;
     return Scaffold(
-      body: Container(
-        color: Color(0xff3EB846),
-        child: Column(
-          children: [
-            SizedBox(
-              height: 40,
-            ),
-            Padding(
-              padding: EdgeInsets.symmetric(horizontal: 40),
-              child: Row(
-                mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                children: [
-                  Container(
-                      child: IconButton(
-                    onPressed: () {
-                      Navigator.pop(context);
-                      print('tapped button');
-                    },
-                    icon: Icon(
-                      Icons.arrow_back,
-                      color: Colors.white,
-                    ),
-                  )),
-                  Row(
-                    mainAxisAlignment: MainAxisAlignment.end,
-                    children: [
-                      Container(
-                        child: Row(
-                          children: [
-                            Icon(Icons.person_outlined,
-                                size: 30, color: Colors.white),
-                            SizedBox(
-                              width: 5,
-                            ),
-                            Icon(Icons.shopping_cart_outlined,
-                                size: 30, color: Colors.white)
-                          ],
-                        ),
-                      )
-                    ],
-                  ),
-                ],
+      body: SingleChildScrollView(
+        child: Container(
+          color: Color(0xff3EB846),
+          child: Column(
+            children: [
+              SizedBox(
+                height: 40,
               ),
-            ),
-            SizedBox(
-              height: 42,
-            ),
-            Expanded(
-              child: Container(
+              Padding(
+                padding: EdgeInsets.symmetric(horizontal: 40),
+                child: Row(
+                  mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                  children: [
+                    Container(
+                        child: IconButton(
+                      onPressed: () {
+                        Navigator.pop(context);
+                        print('tapped button');
+                      },
+                      icon: Icon(
+                        Icons.arrow_back,
+                        color: Colors.white,
+                      ),
+                    )),
+                    Row(
+                      mainAxisAlignment: MainAxisAlignment.end,
+                      children: [
+                        Container(
+                          child: Row(
+                            children: [
+                              Icon(Icons.person_outlined,
+                                  size: 30, color: Colors.white),
+                              SizedBox(
+                                width: 5,
+                              ),
+                              Icon(Icons.shopping_cart_outlined,
+                                  size: 30, color: Colors.white)
+                            ],
+                          ),
+                        )
+                      ],
+                    ),
+                  ],
+                ),
+              ),
+              SizedBox(
+                height: 42,
+              ),
+              Container(
                 width: double.infinity,
                 decoration: BoxDecoration(
                     color: Colors.white,
@@ -77,23 +77,17 @@ class _FavroiteState extends State<Favroite> {
                         SizedBox(
                           height: 20,
                         ),
-                        GestureDetector(
-                          onTap: () {
-                            print('tapped here');
-                            Navigator.pushNamed(context, '/cart');
-                          },
-                          child: Center(
-                            child: Text(
-                              "Saved",
-                              style: const TextStyle(
-                                  fontFamily: "Montserrat",
-                                  fontSize: 20,
-                                  fontWeight: FontWeight.w600,
-                                  color: Color(0xff000000),
-                                  height: 20 / 20,
-                                  letterSpacing: 1),
-                              textAlign: TextAlign.center,
-                            ),
+                        Center(
+                          child: Text(
+                            "Saved",
+                            style: const TextStyle(
+                                fontFamily: "Montserrat",
+                                fontSize: 20,
+                                fontWeight: FontWeight.w600,
+                                color: Color(0xff000000),
+                                height: 20 / 20,
+                                letterSpacing: 1),
+                            textAlign: TextAlign.center,
                           ),
                         ),
                         SizedBox(
@@ -121,9 +115,9 @@ class _FavroiteState extends State<Favroite> {
                             ))
                       ]),
                 ),
-              ),
-            )
-          ],
+              )
+            ],
+          ),
         ),
       ),
     );

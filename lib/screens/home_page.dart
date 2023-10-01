@@ -55,7 +55,7 @@ class _HomePageState extends State<HomePage> {
                             borderRadius: BorderRadius.circular(30),
                             side: BorderSide(color: Colors.black))),
                     onPressed: () {
-                      Navigator.pushNamed(context, '/favroite');
+                      Navigator.pushNamed(context, '/phonenumber');
                     },
                     child: Text(
                       'Login now ',
