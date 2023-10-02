@@ -59,7 +59,6 @@ class _VerifyAccountPageState extends State<VerifyAccountPage> {
                 hasError: false,
                 maskCharacter: "X",
                 onTextChanged: (text) {
-                  // OTP value changed
                   print('this is another check');
                 },
                 onDone: (text) {

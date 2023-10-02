@@ -30,7 +30,7 @@ class Manager extends StatelessWidget {
   Widget build(BuildContext context) {
     return MaterialApp(
       debugShowCheckedModeBanner: false,
-      initialRoute: '/home',
+      initialRoute: '/phonenumber',
       routes: {
         '/home': (context) => HomePage(),
         '/create_account': (context) => CreateAccountPage(),

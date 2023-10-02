@@ -167,6 +167,8 @@ class services {
         Navigator.pushNamed(context, '/account_created');
       } else {
         print('something went wrong during the api calling');
+        print('here is the problem');
+        print('Response body: ${sentotp.body}');
         Flushbar(
           duration: Duration(seconds: 3),
           icon: Icon(Icons.error),
