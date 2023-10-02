@@ -137,6 +137,54 @@ class services {
     print('end');
   }
 
+  Future<void> completeoOtp(String otp) async {
+    print('we are inside the completeotp');
+    var verifyApi = 'https://collabnepal.com/api/otp-verify/$register_id';
+    var realapi = Uri.parse(verifyApi);
+    Map<String, String> otpdata = {'sent_otp': otp};
+    var realotpdata = jsonEncode(otpdata);
+    try {
+      http.Response sentotp = await http.post(
+        realapi,
+        body: realotpdata,
+        headers: {
+          'Content-Type': 'application/json',
+        },
+      );
+      print('statuscode${sentotp.statusCode} ');
+
+      if (sentotp.statusCode == 200) {
+        print('everything is right');
+        var data = jsonDecode(sentotp.body);
+
+        verify_status = data['status'];
+        print(verify_status);
+        verify_message = data['message'];
+        print(verify_message);
+        userId = data['user']['id'];
+        print(userId);
+        verify_token = data['token'];
+        print(verify_token);
+        Navigator.pushNamed(context, '/account_created');
+      } else {
+        print('something went wrong during the api calling');
+        print('here is the problem');
+        print('Response body: ${sentotp.body}');
+        Flushbar(
+          duration: Duration(seconds: 3),
+          icon: Icon(Icons.error),
+          title: 'hey user',
+          message: " sorry otp didn't matched",
+          flushbarPosition: FlushbarPosition.BOTTOM,
+          borderRadius: BorderRadius.circular(10),
+          margin: EdgeInsets.all(5),
+        )..show(context);
+      }
+    } catch (e) {
+      print(e);
+    }
+  }
+
   Future<void> verify_otp(String otp, BuildContext context) async {
     var verifyApi = 'https://collabnepal.com/api/otp-verify/$register_id';
     var realapi = Uri.parse(verifyApi);

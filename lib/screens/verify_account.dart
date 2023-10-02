@@ -11,9 +11,9 @@ class VerifyAccountPage extends StatefulWidget {
 }
 
 class _VerifyAccountPageState extends State<VerifyAccountPage> {
+  TextEditingController input_otp = TextEditingController();
   @override
   Widget build(BuildContext context) {
-    TextEditingController input_otp = TextEditingController();
     double width = MediaQuery.of(context).size.width;
     double height = MediaQuery.of(context).size.width;
     final number = ModalRoute.of(context)!.settings.arguments;
@@ -47,26 +47,11 @@ class _VerifyAccountPageState extends State<VerifyAccountPage> {
                         fontWeight: FontWeight.w400,
                         color: Color(0xff999999)),
                   )),
-              PinCodeTextField(
-                controller: input_otp,
-                autofocus: true,
-                hideCharacter: true,
-                highlight: true,
-                highlightColor: Colors.blue,
-                defaultBorderColor: Colors.black,
-                hasTextBorderColor: Colors.green,
-                maxLength: 5,
-                hasError: false,
-                maskCharacter: "X",
-                onTextChanged: (text) {
-                  print('this is another check');
-                },
-                onDone: (text) {
-                  // OTP value entered completely
-                  print('this is a function check ');
-                },
-                pinBoxDecoration:
-                    ProvidedPinBoxDecoration.underlinedPinBoxDecoration,
+              Padding(
+                padding: const EdgeInsets.all(10.0),
+                child: TextField(
+                  controller: input_otp,
+                ),
               ),
               SizedBox(
                 height: 46,
@@ -97,6 +82,7 @@ class _VerifyAccountPageState extends State<VerifyAccountPage> {
                           borderRadius: BorderRadius.circular(30),
                         )),
                     onPressed: () {
+                      print('${input_otp.text}this is an otp check ');
                       conductor.verify_otp(input_otp.text, context);
                     },
                     child: Text(
