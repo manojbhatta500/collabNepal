@@ -66,7 +66,7 @@ class _AccountCreatedPageState extends State<AccountCreatedPage> {
                         borderRadius: BorderRadius.circular(30),
                       )),
                   onPressed: () {
-                    Navigator.pushNamed(context, '/front_page');
+                    Navigator.pushReplacementNamed(context, '/front_page');
                   },
                   child: Text(
                     'Done',

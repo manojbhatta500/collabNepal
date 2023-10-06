@@ -8,9 +8,9 @@ import 'package:collabnepal/screens/main_screens/favroite.dart';
 import 'package:collabnepal/screens/forgot_password.dart';
 import 'package:collabnepal/screens/front_page.dart';
 import 'package:collabnepal/screens/home_page.dart';
-
 import 'package:collabnepal/screens/hotelbooking.dart';
 import 'package:collabnepal/screens/login_page.dart';
+import 'package:collabnepal/screens/main_screens/profile_screen.dart';
 import 'package:collabnepal/screens/room_details.dart';
 import 'package:collabnepal/screens/searched.dart';
 import 'package:collabnepal/screens/shop.dart';
@@ -49,7 +49,8 @@ class Manager extends StatelessWidget {
         '/product': (context) => Products(),
         '/room_details': (context) => Room_details(),
         '/favroite': (context) => Favroite(),
-        '/cart': (context) => CartScreen()
+        '/cart': (context) => CartScreen(),
+        '/profile': (context)=> ProfileScreen()
       },
     );
   }

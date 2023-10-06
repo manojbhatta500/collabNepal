@@ -19,7 +19,7 @@ class _CreatePhonenumberAccountState extends State<CreatePhonenumberAccount> {
   @override
   Widget build(BuildContext context) {
     double width = MediaQuery.of(context).size.width;
-    double height = MediaQuery.of(context).size.width;
+    double height = MediaQuery.of(context).size.height;
 
     return Scaffold(
       body: SingleChildScrollView(
@@ -48,6 +48,8 @@ class _CreatePhonenumberAccountState extends State<CreatePhonenumberAccount> {
                     color: Color(0xff999999)),
               ),
             ),
+            SizedBox(height: 20,),
+            
             Container(
                 width: 0.80 * width,
                 height: 40,
@@ -59,7 +61,7 @@ class _CreatePhonenumberAccountState extends State<CreatePhonenumberAccount> {
                   ),
                 )),
             SizedBox(
-              height: 0.40 * height,
+              height: 0.20 * height,
             ),
             Container(
               width: 0.7 * width,
@@ -90,24 +92,7 @@ class _CreatePhonenumberAccountState extends State<CreatePhonenumberAccount> {
                     style: TextStyle(color: Colors.white, fontSize: 15),
                   )),
             ),
-            SizedBox(
-              height: 20,
-            ),
-            Container(
-              width: 0.7 * width,
-              height: 50,
-              child: ElevatedButton(
-                  style: ElevatedButton.styleFrom(
-                      primary: Colors.white,
-                      shape: RoundedRectangleBorder(
-                          borderRadius: BorderRadius.circular(30),
-                          side: BorderSide(color: Colors.black))),
-                  onPressed: () {},
-                  child: Text(
-                    'Sign up with email',
-                    style: TextStyle(color: Colors.black, fontSize: 15),
-                  )),
-            ),
+            
             SizedBox(
               height: 0.10 * height,
             )

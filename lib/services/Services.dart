@@ -212,7 +212,7 @@ class services {
         print(userId);
         verify_token = data['token'];
         print(verify_token);
-        Navigator.pushNamed(context, '/account_created');
+        Navigator.pushReplacementNamed(context, '/account_created');
       } else {
         print('something went wrong during the api calling');
         print('here is the problem');

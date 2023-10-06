@@ -1,7 +1,8 @@
 import 'package:collabnepal/constants/constant.dart';
 import 'package:collabnepal/services/Services.dart';
 import 'package:flutter/material.dart';
-import 'package:pin_code_text_field/pin_code_text_field.dart';
+
+
 
 class VerifyAccountPage extends StatefulWidget {
   const VerifyAccountPage({super.key});
@@ -11,13 +12,16 @@ class VerifyAccountPage extends StatefulWidget {
 }
 
 class _VerifyAccountPageState extends State<VerifyAccountPage> {
-  TextEditingController input_otp = TextEditingController();
+  
+  TextEditingController uppercontroller = TextEditingController();
   @override
   Widget build(BuildContext context) {
     double width = MediaQuery.of(context).size.width;
     double height = MediaQuery.of(context).size.width;
     final number = ModalRoute.of(context)!.settings.arguments;
     services conductor = services();
+
+    String usefulotp = '';
 
     return MaterialApp(
       home: Scaffold(
@@ -48,17 +52,20 @@ class _VerifyAccountPageState extends State<VerifyAccountPage> {
                         color: Color(0xff999999)),
                   )),
               Padding(
-                padding: const EdgeInsets.all(10.0),
+                padding: EdgeInsets.symmetric(horizontal: 0.2*width),
                 child: TextField(
-                  controller: input_otp,
+                  controller: uppercontroller,
+                  textAlign: TextAlign.center,
+                  maxLength: 5,
                 ),
               ),
+              
               SizedBox(
                 height: 46,
               ),
               Center(
                 child: Text(
-                  'Haven’t received verification code?',
+                  "Haven't received verification code?",
                   style: mini_style,
                 ),
               ),
@@ -82,8 +89,15 @@ class _VerifyAccountPageState extends State<VerifyAccountPage> {
                           borderRadius: BorderRadius.circular(30),
                         )),
                     onPressed: () {
-                      print('${input_otp.text}this is an otp check ');
-                      conductor.verify_otp(input_otp.text, context);
+                      
+                      print('${usefulotp.runtimeType}');
+                      print('${uppercontroller.text.runtimeType}');
+
+
+                      conductor.verify_otp(uppercontroller.text, context);
+                      
+                      
+                      
                     },
                     child: Text(
                       'Verify now',

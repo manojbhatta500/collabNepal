@@ -21,7 +21,7 @@ class CardCart extends StatelessWidget {
     double width = MediaQuery.of(context).size.width;
 
     return Container(
-      height: 0.15 * height,
+      height: 0.14 * height,
       decoration: BoxDecoration(
         borderRadius: BorderRadius.circular(25),
         color: Color(0xffD9D9D9),
@@ -32,11 +32,13 @@ class CardCart extends StatelessWidget {
             child: Image.asset(
               '$image',
               height: double.infinity,
+             
             ),
           ),
           SizedBox(
             width: 10,
           ),
+        
           Column(
             mainAxisAlignment: MainAxisAlignment.spaceAround,
             crossAxisAlignment: CrossAxisAlignment.start,
@@ -48,7 +50,7 @@ class CardCart extends StatelessWidget {
                   mainAxisAlignment: MainAxisAlignment.end, // Use spaceBetween
                   children: [
                     Expanded(
-                      // Wrap the name text in an Expanded widget
+
                       child: Text(
                         "$name",
                         softWrap: true,
@@ -63,7 +65,9 @@ class CardCart extends StatelessWidget {
                         textAlign: TextAlign.left,
                         overflow: TextOverflow.ellipsis,
                       ),
+
                     ),
+                    
                     Checkbox(
                       shape: CircleBorder(),
                       value: false,
@@ -100,40 +104,70 @@ class CardCart extends StatelessWidget {
                     textAlign: TextAlign.left,
                   ),
                   SizedBox(
-                    width: 20,
+                    width:12
                   ),
-                  CircleAvatar(
-                    radius: 20,
-                    child: IconButton(
+                  Container(
+                    margin: EdgeInsets.only(bottom: 3),
+                    height: 35,
+                    width: 35,
+                    decoration: BoxDecoration(
+                      color: Colors.green,
+                      borderRadius: BorderRadius.circular(40)
+                    ),
+                    child: Center(
+                      child: IconButton(
                       onPressed: () {
-                        print('pressed minus ');
+                        print('pressed plus ');
                       },
                       icon: Icon(
                         CupertinoIcons.minus,
+                        color: Colors.white,
+                      
                       ),
                     ),
+                    ),
+                  ),
+                  SizedBox(
+                    width:10
                   ),
                   Text(
                     '$quantity',
                     style: const TextStyle(
                       fontFamily: "Montserrat",
-                      fontSize: 20,
+                      fontSize: 25,
                       fontWeight: FontWeight.w700,
                       color: Color(0xff000000),
                       height: 20 / 15,
                     ),
                   ),
-                  CircleAvatar(
-                    radius: 20,
-                    child: IconButton(
+                  SizedBox(
+                    width:10
+                  ),
+                  
+                  Container(
+                    margin: EdgeInsets.only(bottom: 3,right: 3),
+                    height: 35,
+                    width: 35,
+                    
+                    decoration: BoxDecoration(
+                      color: Colors.green,
+                      borderRadius: BorderRadius.circular(40)
+                    ),
+                    child: Center(
+                      child: IconButton(
                       onPressed: () {
                         print('pressed plus ');
                       },
                       icon: Icon(
                         Icons.add,
+                        color: Colors.white,
+                        
                       ),
                     ),
-                  ),
+                    ),
+                  )
+                  
+                  
                 ],
               ),
             ],

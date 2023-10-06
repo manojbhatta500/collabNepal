@@ -25,19 +25,9 @@ class _CartScreenState extends State<CartScreen> {
               Padding(
                 padding: EdgeInsets.symmetric(horizontal: 40),
                 child: Row(
-                  mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                  mainAxisAlignment: MainAxisAlignment.end,
                   children: [
-                    Container(
-                        child: IconButton(
-                      onPressed: () {
-                        Navigator.pop(context);
-                        print('tapped button');
-                      },
-                      icon: Icon(
-                        Icons.arrow_back,
-                        color: Colors.white,
-                      ),
-                    )),
+                    
                     Row(
                       mainAxisAlignment: MainAxisAlignment.end,
                       children: [

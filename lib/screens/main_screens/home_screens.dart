@@ -87,19 +87,9 @@ class _HomeScreensState extends State<HomeScreens> {
                         Padding(
                           padding: EdgeInsets.symmetric(horizontal: 20),
                           child: Row(
-                            mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                            mainAxisAlignment: MainAxisAlignment.end,
                             children: [
-                              Container(
-                                  child: IconButton(
-                                onPressed: () {
-                                  Navigator.pop(context);
-                                  print('tapped button');
-                                },
-                                icon: Icon(
-                                  Icons.arrow_back,
-                                  color: Colors.white,
-                                ),
-                              )),
+                              
                               Row(
                                 mainAxisAlignment: MainAxisAlignment.end,
                                 children: [
@@ -111,8 +101,11 @@ class _HomeScreensState extends State<HomeScreens> {
                                         SizedBox(
                                           width: 5,
                                         ),
-                                        Icon(Icons.shopping_cart_outlined,
-                                            size: 30, color: Colors.white)
+                                        IconButton(onPressed: (){
+                                          Navigator.pushNamed(context, '/front_page');
+                                        }, icon: Icon(Icons.shopping_cart_outlined,
+                                            size: 30, color: Colors.white))
+                                        
                                       ],
                                     ),
                                   )

@@ -46,13 +46,19 @@ class BoxContainer extends StatelessWidget {
                         Container(
                           child: Row(
                             children: [
-                              Icon(Icons.person_outline_outlined,
-                                  size: 30, color: Colors.white),
+                              IconButton(onPressed: (){
+                                Navigator.pushNamed(context, '/profile');
+                              }, icon: Icon(Icons.person_outline_outlined,
+                                  size: 30, color: Colors.white),),
+                              
                               SizedBox(
                                 width: 5,
                               ),
-                              Icon(Icons.shopping_cart_outlined,
-                                  size: 30, color: Colors.white)
+                              IconButton(onPressed: (){
+                                Navigator.pushNamed(context, '/cart');
+
+                              }, icon: Icon(Icons.shopping_cart_outlined,
+                                  size: 30, color: Colors.white))
                             ],
                           ),
                         )
