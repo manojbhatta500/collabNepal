@@ -56,7 +56,12 @@ class _VerifyAccountPageState extends State<VerifyAccountPage> {
                 child: TextField(
                   controller: uppercontroller,
                   textAlign: TextAlign.center,
+                  
                   maxLength: 5,
+                  decoration: InputDecoration(
+                    counterText: '',
+                    
+                  ),
                 ),
               ),
               

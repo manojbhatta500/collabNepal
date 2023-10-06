@@ -6,8 +6,13 @@ import 'dart:convert';
 class HotelServices {
   List<Hotel_container> hotellist = [];
 
+  
+
+
   var api = 'https://collabnepal.com/api/hotels';
+  
   Future<void> getHotels() async {
+
     var realApi = Uri.parse(api);
     try {
       http.Response getResponse = await http.get(realApi);

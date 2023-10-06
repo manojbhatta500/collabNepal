@@ -31,19 +31,7 @@ class _TaylorState extends State<Taylor> {
   Widget build(BuildContext context) {
     double height = MediaQuery.of(context).size.height;
     return Scaffold(
-      bottomNavigationBar: BottomNavigationBar(
-          currentIndex: cureentstate,
-          onTap: settap,
-          items: [
-            BottomNavigationBarItem(
-                icon: Image.asset('assets/home.png'), label: 'home'),
-            BottomNavigationBarItem(
-                icon: Image.asset('assets/fav.png'), label: 'favroite'),
-            BottomNavigationBarItem(
-                icon: Image.asset('assets/cart.png'), label: 'cart'),
-            BottomNavigationBarItem(
-                icon: Image.asset('assets/user.png'), label: 'user')
-          ]),
+      
       body: SingleChildScrollView(
         child: Column(
           mainAxisAlignment: MainAxisAlignment.start,

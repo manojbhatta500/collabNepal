@@ -20,32 +20,13 @@ class _BoutiqueState extends State<Boutique> {
     Boutique_product(
         boutique_pic: 'assets/shampoo.png', boutique_name: 'sunsilk'),
   ];
-  int cureentstate = 0;
-  void settap(int index) {
-    setState(() {
-      cureentstate = index;
-    });
-  }
+  
 
   @override
   Widget build(BuildContext context) {
     double height = MediaQuery.of(context).size.height;
     return Scaffold(
-      bottomNavigationBar: BottomNavigationBar(
-          currentIndex: cureentstate,
-          onTap: settap,
-          items: [
-            BottomNavigationBarItem(
-              icon: Image.asset('assets/home.png'),
-              label: 'home',
-            ),
-            BottomNavigationBarItem(
-                icon: Image.asset('assets/fav.png'), label: 'favroite'),
-            BottomNavigationBarItem(
-                icon: Image.asset('assets/cart.png'), label: 'cart'),
-            BottomNavigationBarItem(
-                icon: Image.asset('assets/user.png'), label: 'user')
-          ]),
+      
       body: SingleChildScrollView(
         child: Column(
           mainAxisAlignment: MainAxisAlignment.start,

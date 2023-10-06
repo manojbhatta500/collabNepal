@@ -33,16 +33,7 @@ class _HotelBookingState extends State<HotelBooking> {
     double height = MediaQuery.of(context).size.height;
 
     return Scaffold(
-      bottomNavigationBar: BottomNavigationBar(items: [
-        BottomNavigationBarItem(
-            icon: Image.asset('assets/home.png'), label: 'home'),
-        BottomNavigationBarItem(
-            icon: Image.asset('assets/fav.png'), label: 'favroite'),
-        BottomNavigationBarItem(
-            icon: Image.asset('assets/cart.png'), label: 'cart'),
-        BottomNavigationBarItem(
-            icon: Image.asset('assets/user.png'), label: 'user')
-      ]),
+     
       body: ListView(
         children: [
           SizedBox(

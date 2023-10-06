@@ -311,7 +311,10 @@ class _HomeScreensState extends State<HomeScreens> {
                   width: 83,
                   height: 30,
                   child: ElevatedButton(
-                    onPressed: () {},
+                    onPressed: () {
+                      Navigator.pushNamed(context, '/product');
+                    }
+                    ,
                     child: Text(
                       'View all',
                       textAlign: TextAlign.center,
